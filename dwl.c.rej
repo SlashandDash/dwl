@@ -1,0 +1,11 @@
+--- dwl.c
++++ dwl.c
+@@ -369,6 +371,8 @@ static struct wlr_box sgeom;
+ static struct wl_list mons;
+ static Monitor *selmon;
+ 
++static int enablegaps = 1;   /* enables gaps, used by togglegaps */
++
+ /* global event handlers */
+ static struct wl_listener cursor_axis = {.notify = axisnotify};
+ static struct wl_listener cursor_button = {.notify = buttonpress};
